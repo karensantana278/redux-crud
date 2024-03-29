@@ -6,23 +6,23 @@ export interface User {
 
 export const userList: User[] = [
     {
-        name: "Myllena lucena",
-        email: "myllena@gmail.com",
+        name: "User 1",
+        email: "user1@email.com",
         id: 1
     },
     {
-        name: "Nathalia Machado",
-        email: "nathalia@gmail.com",
+        name: "User 2",
+        email: "user2@email.com",
         id: 2
     },
     {
-        name: "Ana Lucia",
-        email: "ana@gmail.com",
+        name: "User 3",
+        email: "user3@email.com",
         id: 3
     },
     {
-        name: "Marcos Paulo",
-        email: "marcos@gmail.com",
+        name: "User 4",
+        email: "user4@email.com",
         id: 4
     },
 ];
