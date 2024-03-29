@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react"
-import { addUser } from "./UserReducer"
+import { addUser } from "../store/reducers/UserReducer"
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "./Data"
+import { RootState } from "../data/Data"
 import { useNavigate } from 'react-router-dom';
 
 function Create(){
@@ -22,17 +22,17 @@ function Create(){
 
     return(
         <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
-            <div className="w-50 border bg-secondary text-white p-5">
+            <div className="w-50 border bg-light p-5">
                 <h3>Add New User</h3>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input type="text" name="name" id="name" className="form-control text-dark" placeholder="Enter your name" onChange={event => setName(event.target.value)}/>
+                        <input type="text" name="name" id="name" className="form-control" placeholder="Enter your name" onChange={event => setName(event.target.value)}/>
                     </div>
                     <br />
                     <div>
                         <label htmlFor="email">Email: </label>
-                        <input type="email" name="email" id="email" className="form-control text-dark" placeholder="Enter your email" onChange={event => setEmail(event.target.value)}/>
+                        <input type="email" name="email" id="email" className="form-control" placeholder="Enter your email" onChange={event => setEmail(event.target.value)}/>
                     </div>
                     <br />
 

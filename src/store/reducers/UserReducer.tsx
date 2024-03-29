@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { userList, User } from "./Data";
+import { userList, User } from "../../data/Data";
 
 
 const userSlice = createSlice({

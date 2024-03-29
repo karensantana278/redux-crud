@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from './Data'; 
+import { RootState } from '../data/Data'; 
 import { Link } from 'react-router-dom';
-import { deleteUser } from "./UserReducer";
+import { deleteUser } from "../store/reducers/UserReducer";
 
 function Home() {
     const users = useSelector((state: RootState) => state.user);
