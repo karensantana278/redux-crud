@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react"
 import { addUser } from "../store/reducers/UserReducer"
 import { useDispatch, useSelector } from "react-redux"
-import { RootState } from "../data/Data"
+import { RootState } from "../types/User"
 import { useNavigate } from 'react-router-dom';
 
 function Create(){
@@ -16,7 +16,10 @@ function Create(){
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        dispatch(addUser({id: users[users.length - 1].id + 1, name: name, email: email}))
+
+        const nextId = Math.max(...users.map(user => user.id), 0) + 1;
+
+        dispatch(addUser({id: nextId, name: name, email: email}))
         navigate('/')
     }
 

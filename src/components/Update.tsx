@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { RootState } from '../data/Data'; 
+import { RootState } from '../types/User'; 
 import { useDispatch, useSelector } from "react-redux";
 import { FormEvent, useState } from "react";
 import { useNavigate } from 'react-router-dom';
