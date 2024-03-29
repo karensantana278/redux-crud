@@ -7,12 +7,8 @@ function Home() {
     const users = useSelector((state: RootState) => state.user);
     const dispatch = useDispatch();
 
-    const handleDelete = (id) => {
-        dispatch(deleteUser({
-            id: id,
-            name: '',
-            email: ''
-        }));
+    const handleDelete = (id: number) => {
+        dispatch(deleteUser(id));
     }
     
     return (
